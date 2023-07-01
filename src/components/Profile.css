@@ -1,0 +1,190 @@
+.profile-info {
+  width: 100%;
+  max-width: 75em;
+  height: 20em;
+  margin: 20px auto;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 10px 14px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+
+.profile-container {
+  overflow-x: hidden;
+}
+
+.profile-picture,
+.profile-details,
+.edit-button {
+  margin-top: 100px;
+}
+
+.profile-content {
+  display: flex;
+  justify-content: center;
+}
+
+.about-friends-container {
+  width: 500px;
+}
+
+.posts-section {
+  width: 45em;
+}
+
+.cover-photo img {
+  width: 100%;
+}
+
+.profile-picture img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 20px;
+  border: 3px solid #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.profile-details {
+  flex: 1;
+}
+
+.name {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.bio {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.location,
+.work {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 5px;
+}
+
+.about-section,
+.friends-section,
+.posts-section {
+  padding: 20px;
+}
+
+.about-section {
+  border-bottom: 1px solid #ccc;
+  border-radius: 20px;
+  box-shadow: 10px 10px 5px whitesmoke;
+}
+
+.friends-section {
+  border-bottom: 1px solid #ccc;
+  border-radius: 20px;
+  box-shadow: 10px 10px 5px whitesmoke;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.post {
+  background-color: #f7f7f7;
+  padding: 10px;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+
+.post h3 {
+  margin-top: 0;
+}
+
+.postProfile-content {
+  background-color: #ffffff;
+  border: 1px solid #ced4da;
+  border-radius: 1.25rem;
+  padding: 1rem;
+  margin-bottom: 20px;
+  box-shadow: 10px 10px 5px whitesmoke;
+}
+
+.postProfile-header {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.postProfile-author {
+  font-weight: 900;
+  font-size: 15px;
+  color: black;
+}
+
+.postProfile-date {
+  color: grey;
+  font-size: 15px;
+  margin-top: -5px !important;
+}
+
+button {
+  margin-left: 10px !important;
+  padding: 8px 12px;
+  border-radius: 5px !important;
+  background-color: #1877f2;
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 5px;
+}
+
+/* Friend Section */
+
+.friends-avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+  border: 1px solid grey;
+}
+
+.friends-section ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 10px;
+}
+
+.friends-section {
+  left: 0;
+}
+
+.friends-list:hover {
+  transform: scale(1.05);
+  transition: 0.7s;
+}
+
+.friend-name {
+  color: rgb(56, 56, 56);
+}
+
+.friends-number {
+  color: rgb(105, 104, 104);
+}
+
+.edit-button {
+  margin-top: -20px;
+}
+
+.send-request-button {
+  margin-bottom: -120px;
+}

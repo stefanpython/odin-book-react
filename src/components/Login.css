@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Fugaz+One&family=Lato&family=Moirai+One&display=swap");
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: aliceblue;
+}
+
+.login-welcome {
+  text-align: center;
+  margin-bottom: 20px;
+  width: 350px;
+}
+
+.login-welcome h1 {
+  font-size: 55px;
+  font-family: "Fugaz One", cursive;
+  color: rgb(23, 172, 160);
+}
+
+.login-welcome p {
+  font-size: 24px;
+  font-family: "Lato", sans-serif;
+}
+
+.login-form {
+  max-width: 400px;
+  padding: 20px;
+  padding-left: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 10px 10px 5px rgb(172, 172, 172);
+}
+
+.login-title {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.login-input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-left: 10px;
+}
+
+.login-button {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #4267b2;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.login-link {
+  text-align: center;
+  display: block;
+  margin-bottom: 10px;
+  color: #385898;
+  text-decoration: none;
+}
+
+.login-divider {
+  margin: 20px 0;
+}
+
+.login-create-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #42b72a;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.login-demo-button {
+  background-color: #3b9298;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.login-demo-button:hover {
+  background-color: #2d4373;
+}
+
+.login-error,
+.signup-error {
+  display: flex;
+  justify-content: center;
+  color: red;
+}

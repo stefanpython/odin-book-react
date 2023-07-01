@@ -1,0 +1,101 @@
+.create-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  padding-top: 35px;
+}
+
+.create-form {
+  width: 100%;
+  max-width: 640px;
+}
+
+.create-input {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: -15px;
+  border: 0.5px dotted grey;
+  padding: 10px;
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  .create-input {
+    width: 99%;
+    margin-left: 2px;
+  }
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+#image {
+  color: rebeccapurple;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.createpost-btn {
+  padding: 5px 20px;
+  border: none;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.createpost-btn:hover {
+  background-color: #0056b3;
+}
+
+hr {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: none;
+  border-top: 1px solid #ccc;
+}
+
+#image {
+  display: none;
+}
+
+.file-input-label {
+  display: inline-block;
+  padding: 5px 10px;
+  border: none;
+  background-color: #b17900;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.file-input-label:hover {
+  background-color: #0056b3;
+}
+
+.file-input-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.file-input-text {
+  margin-left: 10px;
+  font-size: 16px;
+}

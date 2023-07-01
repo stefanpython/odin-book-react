@@ -1,0 +1,170 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap");
+
+.avatar {
+  width: 35px;
+}
+
+.dropdown-menu-left {
+  transform: translateX(calc(-35%));
+}
+
+.nav-button {
+  width: 30px;
+  margin: 0 25px;
+}
+
+.nav-button:hover {
+  background-color: rgba(128, 128, 128, 0.233);
+  padding: 2px;
+  border-radius: 10px;
+}
+
+@media (max-width: 996px) {
+  .navbar-brand {
+    display: none !important;
+  }
+
+  .navbar-nav {
+    flex-direction: row !important;
+  }
+
+  .searchbar-form {
+    margin: auto;
+  }
+  .nav-links {
+    margin: auto;
+  }
+
+  .buttons-container {
+    margin-left: 0 !important;
+  }
+}
+
+.searchbar-form {
+  display: flex;
+  align-items: center;
+}
+
+.searchbar-input {
+  position: relative;
+}
+
+.searchbar-input i {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.searchbar-input input[type="text"] {
+  padding-left: 30px;
+  padding-right: 10px;
+  border-radius: 20px;
+  border: 1px solid #ced4da;
+}
+
+.link-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  margin-top: -15px;
+  margin-bottom: -15px;
+}
+
+.nav-text {
+  font-size: 13px;
+}
+
+.navbar {
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.103);
+}
+
+.buttons-container {
+  margin-left: 180px;
+}
+
+.nav-profilePhoto {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+/* SeachBar */
+.search-results-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  max-height: 200px;
+  overflow-y: auto;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+
+.search-result-item {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.search-result-item:hover {
+  background-color: #f5f5f5;
+}
+
+li {
+  list-style: none;
+}
+
+.contacts-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-top: 5px;
+  margin-right: 5px;
+}
+
+.contacts-container li {
+  font-weight: 900;
+}
+
+.contacts-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.contacts-item {
+  color: rgb(66, 66, 66);
+  display: inline-block;
+  width: 100%;
+}
+
+.contacts-item:hover {
+  background-color: #cccccc49;
+  padding: 1px 0;
+  border-radius: 5px;
+  text-decoration: none;
+  color: inherit;
+}
+
+@media (max-width: 1360px) {
+  .contacts-container {
+    display: none;
+  }
+}
+
+.odin,
+.book {
+  font-family: "Poppins", sans-serif;
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.odin {
+  font-style: oblique;
+  color: #0074d9;
+}
+
+.book {
+  color: #a9a9a9;
+}
