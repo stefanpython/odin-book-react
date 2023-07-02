@@ -14,7 +14,9 @@ const RouterSwitch = () => {
   return (
     <BrowserRouter>
       {cookies.token && <OdinbookNav />}
+
       <Routes>
+        {/* <Route path="*" element={<Navigate to="/" />} /> */}
         <Route
           path="/"
           element={cookies.token ? <Posts /> : <Navigate to="/login" />}
@@ -23,7 +25,6 @@ const RouterSwitch = () => {
         <Route path="/signup" element={<Signup />} />
         <Route path="/profile/:userId" element={<Profile />} />
         <Route path="/request-list/:userId" element={<FriendRequest />} />
-        <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </BrowserRouter>
   );
