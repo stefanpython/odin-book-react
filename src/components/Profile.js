@@ -6,6 +6,7 @@ import PostsContext from "./PostsContext";
 import DisplayComment from "./DisplayComment";
 import EditProfile from "./EditProfile";
 import jwtDecode from "jwt-decode";
+import placeholderIcon from "../images/placeholder.png";
 
 const Profile = () => {
   const [cookies] = useCookies(["token"]);
@@ -116,7 +117,7 @@ const Profile = () => {
                   <img src={`${profileData.user.profilePhoto}`} alt="Profile" />
                 )
               ) : (
-                <img className="avatar" src="/placeholder.png" alt="Profile" />
+                <img className="avatar" src={placeholderIcon} alt="Profile" />
               )}
             </div>
 
@@ -232,7 +233,7 @@ const Profile = () => {
                         ) : (
                           <img
                             className="avatar"
-                            src="/placeholder.png"
+                            src={placeholderIcon}
                             alt="Profile"
                           />
                         )}
