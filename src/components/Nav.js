@@ -202,7 +202,7 @@ const OdinbookNav = () => {
             <span className="nav-text">Home</span>
           </div>
         </Nav.Link>
-        <Nav.Link href="/request-list/:userId">
+        <Nav.Link href={`/request-list/${userId}`}>
           <div className="link-container">
             {friendRequests && friendRequests.friendRequest.length !== 0 ? (
               <img
