@@ -161,7 +161,7 @@ const OdinbookNav = () => {
 
   return (
     <Navbar bg="light" expand="lg">
-      <Navbar.Brand className="navbar-brand" href="/">
+      <Navbar.Brand className="navbar-brand" href="/#/">
         <span className="odin">Odin</span>
         <span className="book">book</span>
       </Navbar.Brand>
@@ -196,13 +196,13 @@ const OdinbookNav = () => {
       </Form>
 
       <Nav className="nav-links mr-auto mx-auto">
-        <Nav.Link href="/">
+        <Nav.Link href="/#/">
           <div className="link-container">
             <img src={homebuttonIcon} className="nav-button" alt="home" />
             <span className="nav-text">Home</span>
           </div>
         </Nav.Link>
-        <Nav.Link href={`/request-list/${userId}`}>
+        <Nav.Link href={`/#/request-list/${userId}`}>
           <div className="link-container">
             {friendRequests && friendRequests.friendRequest.length !== 0 ? (
               <img
