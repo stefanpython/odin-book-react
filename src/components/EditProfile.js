@@ -54,13 +54,16 @@ const EditProfile = () => {
     formData.append("image", profilePhoto);
 
     // Make a PUT request to update the profile
-    fetch(`https://odin-book-api-production.up.railway.app/${userId}/update`, {
-      method: "PUT",
-      headers: {
-        Authorization: `Bearer ${cookies.token}`,
-      },
-      body: formData,
-    })
+    fetch(
+      `https://odin-book-api-production.up.railway.app/profile/${userId}/update`,
+      {
+        method: "PUT",
+        headers: {
+          Authorization: `Bearer ${cookies.token}`,
+        },
+        body: formData,
+      }
+    )
       .then((response) => response.json())
       .then((data) => {
         console.log("Profile updated successfully!", data);
