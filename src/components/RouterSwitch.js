@@ -23,6 +23,7 @@ const RouterSwitch = () => {
         <Route path="/signup" element={<Signup />} />
         <Route path="/profile/:userId" element={<Profile />} />
         <Route path="/request-list/:userId" element={<FriendRequest />} />
+        <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </BrowserRouter>
   );

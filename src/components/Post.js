@@ -7,6 +7,7 @@ import PostsContext from "./PostsContext";
 import DisplayComment from "./DisplayComment";
 import Contacts from "./Contacts";
 import jwtDecode from "jwt-decode";
+import placeholderIcon from "../images/placeholder.png";
 
 const Posts = () => {
   const [posts, setPosts] = useState([]);
@@ -17,7 +18,7 @@ const Posts = () => {
   useEffect(() => {
     fetchPosts();
     fetchUserProfile();
-  }, [cookies.token]);
+  }, []);
 
   const fetchPosts = () => {
     fetch("https://odin-book-api-production.up.railway.app/posts", {
@@ -54,11 +55,14 @@ const Posts = () => {
   const loggedUserId = getUserIDFromToken(cookies.token);
 
   const fetchUserProfile = () => {
-    fetch(`https://odin-book-api-production.up.railway.app/${loggedUserId}`, {
-      headers: {
-        "Content-Type": "application/json",
-      },
-    })
+    fetch(
+      `https://odin-book-api-production.up.railway.app/profile/${loggedUserId}`,
+      {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    )
       .then((response) => {
         if (response.ok) {
           return response.json();
@@ -93,16 +97,12 @@ const Posts = () => {
               <div className="post-header">
                 {post.userId && post.profilePhoto ? (
                   <img
-                    src={`https://odin-book-api-production.up.railway.app/${post.profilePhoto}`}
+                    src={`https://odin-book-api-production.up.railway.app/images/${post.profilePhoto}`}
                     alt="User Avatar"
                     className="avatar"
                   />
                 ) : (
-                  <img
-                    className="avatar"
-                    src="/placeholder.png"
-                    alt="Profile"
-                  />
+                  <img className="avatar" src={placeholderIcon} alt="Profile" />
                 )}
 
                 <div className="post-author-date">

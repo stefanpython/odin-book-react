@@ -2,6 +2,8 @@ import React, { useState, useContext } from "react";
 import { useCookies } from "react-cookie";
 import PostsContext from "./PostsContext";
 import "./DisplayComment.css";
+import likeIcon from "../images/like.png";
+import placeholderIcon from "../images/placeholder.png";
 
 const DisplayComment = ({ postId }) => {
   const [isCommentVisible, setCommentVisible] = useState(false);
@@ -21,7 +23,7 @@ const DisplayComment = ({ postId }) => {
   // Handle adding comment
   const postComment = () => {
     fetch(
-      `https://odin-book-api-production.up.railway.app/${postId._id}/comment`,
+      `https://odin-book-api-production.up.railway.app/posts/${postId._id}/comment`,
       {
         method: "POST",
         headers: {
@@ -51,7 +53,7 @@ const DisplayComment = ({ postId }) => {
   // Handle adding like
   const addLike = () => {
     fetch(
-      `https://odin-book-api-production.up.railway.app/${postId._id}/like`,
+      `https://odin-book-api-production.up.railway.app/posts/${postId._id}/like`,
       {
         method: "POST",
         headers: {
@@ -89,7 +91,7 @@ const DisplayComment = ({ postId }) => {
     <div>
       <div className="like-icon-container">
         <span className="like-count">{postId.likeCount} </span>
-        <img className="like-icon" src="/like.png" alt="like icon" />
+        <img className="like-icon" src={likeIcon} alt="like icon" />
       </div>
       <div className="commentsBtnContainer">
         <p className="comments-btn" onClick={toggleCommentDisplay}>
@@ -136,7 +138,7 @@ const DisplayComment = ({ postId }) => {
               <div key={comment._id} className="comment">
                 <div className="comment-avatar">
                   <img
-                    src="/placeholder.png"
+                    src={placeholderIcon}
                     alt="User Avatar"
                     className="avatar"
                   />

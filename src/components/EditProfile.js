@@ -15,7 +15,7 @@ const EditProfile = () => {
   const { fetchPosts, toggleEditForm } = useContext(PostsContext);
 
   useEffect(() => {
-    fetch(`https://odin-book-api-production.up.railway.app/${userId}`, {
+    fetch(`https://odin-book-api-production.up.railway.app/profile/${userId}`, {
       headers: {
         Authorization: `Bearer ${cookies.token}`,
       },

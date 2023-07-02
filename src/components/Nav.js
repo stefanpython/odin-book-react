@@ -5,6 +5,11 @@ import { useEffect, useState, useRef } from "react";
 import jwtDecode from "jwt-decode";
 import "./Nav.css";
 
+import homebuttonIcon from "../images/home-button.png";
+import notificationIcon from "../images/notification.png";
+import placeholderIcon from "../images/placeholder.png";
+import friendsIcon from "../images/friends.png";
+
 const OdinbookNav = () => {
   const [profileData, setProfileData] = useState({});
   const [token, setToken] = useCookies(["token"]);
@@ -49,11 +54,14 @@ const OdinbookNav = () => {
   // Fetch data to display user icon
   useEffect(() => {
     if (userId) {
-      fetch(`https://odin-book-api-production.up.railway.app/${userId}`, {
-        headers: {
-          "Content-Type": "application/json",
-        },
-      })
+      fetch(
+        `https://odin-book-api-production.up.railway.app/profile/${userId}`,
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      )
         .then((response) => {
           if (response.ok) {
             return response.json();
@@ -127,12 +135,15 @@ const OdinbookNav = () => {
 
   // Fetch the friend request list from the backend
   useEffect(() => {
-    fetch(`https://odin-book-api-production.up.railway.app/${userId}`, {
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${token.token}`,
-      },
-    })
+    fetch(
+      `https://odin-book-api-production.up.railway.app/request-list/${userId}`,
+      {
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token.token}`,
+        },
+      }
+    )
       .then((response) => {
         if (response.ok) {
           return response.json();
@@ -146,7 +157,7 @@ const OdinbookNav = () => {
       .catch((err) => {
         console.log("Error retrieving posts:", err);
       });
-  }, []);
+  }, [token.token, userId]);
 
   return (
     <Navbar bg="light" expand="lg">
@@ -187,7 +198,7 @@ const OdinbookNav = () => {
       <Nav className="nav-links mr-auto mx-auto">
         <Nav.Link href="/">
           <div className="link-container">
-            <img src="/home-button.png" className="nav-button" alt="home" />
+            <img src={homebuttonIcon} className="nav-button" alt="home" />
             <span className="nav-text">Home</span>
           </div>
         </Nav.Link>
@@ -195,12 +206,12 @@ const OdinbookNav = () => {
           <div className="link-container">
             {friendRequests && friendRequests.friendRequest.length !== 0 ? (
               <img
-                src="/notification.png"
+                src={notificationIcon}
                 className="nav-button"
                 alt="friends"
               />
             ) : (
-              <img src="/friends.png" className="nav-button" alt="friends" />
+              <img src={friendsIcon} className="nav-button" alt="friends" />
             )}
 
             <span className="nav-text">Friend Requests</span>
@@ -218,7 +229,7 @@ const OdinbookNav = () => {
                 alt=""
               />
             ) : (
-              <img src="/placeholder.png" alt="Profile" className="avatar" />
+              <img src={placeholderIcon} alt="Profile" className="avatar" />
             )}
           </Dropdown.Toggle>
 

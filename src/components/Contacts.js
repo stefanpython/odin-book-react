@@ -23,7 +23,7 @@ const Contacts = () => {
   const userId = getUserIDFromToken(cookies.token);
 
   useEffect(() => {
-    fetch(`http://localhost:3000/profile/${userId}`, {
+    fetch(`https://odin-book-api-production.up.railway.app/profile/${userId}`, {
       headers: {
         "Content-Type": "application/json",
       },
@@ -53,7 +53,7 @@ const Contacts = () => {
             <Link to={`/profile/${friend._id}`} className="contacts-item">
               <img
                 className="contacts-avatar"
-                src={`http://localhost:3000/images/${friend.profilePhoto}`}
+                src={`https://odin-book-api-production.up.railway.app/images/${friend.profilePhoto}`}
                 alt="avatar"
               />
               {friend.firstName} {friend.lastName}
