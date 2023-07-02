@@ -1,4 +1,10 @@
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import {
+  BrowserRouter,
+  HashRouter,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
 import { useCookies } from "react-cookie";
 import OdinbookNav from "./Nav";
 import Signup from "../components/Signup";
@@ -12,7 +18,7 @@ const RouterSwitch = () => {
   const [cookies] = useCookies(["token"]);
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       {cookies.token && <OdinbookNav />}
 
       <Routes>
@@ -26,7 +32,7 @@ const RouterSwitch = () => {
         <Route path="/request-list/:userId" element={<FriendRequest />} />
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 };
 
