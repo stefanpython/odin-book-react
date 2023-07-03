@@ -2,6 +2,8 @@
 
 Live demo [Here](https://stefanpython.github.io/odin-book-react/)
 
+RESTful API for this project [Here](https://github.com/stefanpython/odin-book-api)
+
 Odin Book is a social media platform where users can connect with friends, share posts, and interact with each other. This app is built using React for the frontend and a custom RESTful API for the backend.
 
 ## Features
