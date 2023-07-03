@@ -17,14 +17,12 @@ const Profile = () => {
 
   // Persist isRequestSent variable
   const [isRequestSent, setIsRequestSent] = useState(
-    localStorage.getItem("isRequestSent") === "true"
+    localStorage.getItem("isRequestSent") === userId
   );
 
   useEffect(() => {
     if (isRequestSent) {
-      localStorage.setItem("isRequestSent", "true");
-    } else {
-      localStorage.removeItem("isRequestSent");
+      localStorage.setItem("isRequestSent", userId);
     }
   }, [isRequestSent]);
 
@@ -100,6 +98,7 @@ const Profile = () => {
   // Check if the logged-in user and the profile user are friends
   const isFriend =
     profileData && profileData.user.friends.includes(loggedUserId);
+  // console.log(profileData.user.friends);
 
   return (
     <div className="profile-container">
